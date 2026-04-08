@@ -1,31 +1,43 @@
-package eshdg;
 import java.util.*;
-public class Main11 {
-	public static void main(String[] args) {
-		Employe em1=new Employe("jeeva",123,"mech");
-		Employe em2=new Employe("bhavin",456,"civil");
-		Employe em3=new Employe("saran",789,"architect");
-		System.out.println(em1);
-		System.out.println(em2);
-		System.out.println(em3);
 
-	ArrayList<Employe>list=new ArrayList<>();
-	list.add(em1);
-	list.add(em2);
-	list.add(em3);
-	System.out.println(list);
-	}
+class Student {
+    String name;
+    int roll;
+    String dept;
+
+    void display() {
+        System.out.println(name + " " + roll + " " + dept);
+    }
 }
-class Employe {
-	String empname;
-	int empid;
-	String depart;
-	Employe(String empname,int empid,String depart){
-	this.empname=empname;
-	this.empid=empid;
-	this.depart=depart;
-	}
-    public String toString() {
-	return empname+" "+empid+" "+depart;
-}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Student st1 = new Student();
+        st1.name = "Madhu";
+        st1.roll = 192312261;
+        st1.dept = "ECE";
+
+        Student st2 = new Student();
+        st2.name = "sai kiran";
+        st2.roll = 192312260;
+        st2.dept = "ECE";
+
+        Student st3 = new Student();
+        st3.name = "ahid basha";
+        st3.roll = 192312257;
+        st3.dept = "ECE";
+
+        System.out.println(st1.name + " " + st1.roll + " " + st1.dept);
+        System.out.println(st2.name + " " + st2.roll + " " + st2.dept);
+        System.out.println(st3.name + " " + st3.roll + " " + st3.dept);
+
+        ArrayList<Student> list = new ArrayList<>();
+        list.add(st1);
+        list.add(st2);
+        list.add(st3);
+
+        for(Student s : list)
+            s.display();
+    }
 }
